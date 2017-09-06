@@ -9,7 +9,7 @@
 # TEAMS
 
 
-Teams.create!([
+Team.create!([
     {logo: 'http://content.sportslogos.net/logos/6/220/full/9168_atlanta_hawks-primary-2016.png', abbrev: 'ATL', name: 'Atlanta Hawks', total_salaries: '$94.4m'},
     {logo: 'http://content.sportslogos.net/logos/6/213/full/slhg02hbef3j1ov4lsnwyol5o.png', abbrev: 'BOS', name: 'Boston Celtics', total_salaries: '$109.8m'},
     {logo: 'http://content.sportslogos.net/logos/6/3786/full/345_brooklyn-nets-secondary-2013.png', abbrev: 'BKN', name: 'Brooklyn Nets', total_salaries: '$95.6m'},
@@ -41,9 +41,9 @@ Teams.create!([
     {logo: 'http://content.sportslogos.net/logos/6/227/full/4578_toronto_raptors-primary-2016.png', abbrev: 'TOR', name: 'Toronto Raptors', total_salaries: '$120.9m'},
     {logo: 'http://content.sportslogos.net/logos/6/234/full/6749_utah_jazz-primary-2017.png', abbrev: 'UTA', name: 'Utah Jazz', total_salaries: '$111.2m'},
     {logo: 'http://content.sportslogos.net/logos/6/219/full/5671_washington_wizards-primary-2016.png', abbrev: 'WAS', name: 'Washington Wizards', total_salaries: '$126m'},
-]),
+])
 
-Players.create!([
+Player.create!([
     {team: 'ATL', name: 'Dennis Schroder', position: 'PG', height: '6ft 1in', weight: '172lbs', picture: 'http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203471.png'},
     {team: 'ATL', name: 'Kent Bazemore', position: 'SG', height: '6ft 5in', weight: '201lbs', picture: 'http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203145.png'},
     {team: 'ATL', name: 'Taurean Prince', position: 'SF', height: '6ft 8in', weight: '220lbs', picture: 'http://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/1627752.png'},
