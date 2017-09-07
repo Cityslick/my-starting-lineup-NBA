@@ -11,15 +11,15 @@
                 <div><%= t.total_salaries %></div>
             </div>
             <% @player.each do |p| %>
-                <div class="player-container">
                     <% if p.team === t.abbrev %>
-                        <img src=<%=p.picture%> />
-                        <%= p.name %>
-                        <%= p.position %>
-                        <%= p.height %>
-                        <%= p.weight %>
+                        <div class="player-container">
+                            <div><img src=<%=p.picture%> /></div>
+                            <div><%= p.name %></div>
+                            <div><%= p.position %></div>
+                            <div><%= p.height %></div>
+                            <div><%= p.weight %></div>
+                        </div>
                     <% end %>
-                </div>
             <% end %>
         </div>
         <br>
