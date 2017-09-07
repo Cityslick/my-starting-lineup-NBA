@@ -13,11 +13,17 @@
             <% @player.each do |p| %>
                     <% if p.team === t.abbrev %>
                         <div class="player-container">
-                            <div><img src=<%=p.picture%> /></div>
-                            <div><%= p.name %></div>
-                            <div><%= p.position %></div>
-                            <div><%= p.height %></div>
-                            <div><%= p.weight %></div>
+                            <div class="player">
+                                <div><img src=<%=p.picture%> /></div>
+                                <div><%= p.name %></div>
+                                <div><%= p.position %></div>
+                                <div><%= p.height %></div>
+                                <div><%= p.weight %></div>
+                            </div>
+                            <div class="links">
+                                <button class="btn-1">EDIT</button>
+                                <button class="btn-1">DELETE</button>
+                            </div>
                         </div>
                     <% end %>
             <% end %>
