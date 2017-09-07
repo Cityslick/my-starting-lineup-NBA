@@ -1,1 +1,15 @@
 <h1>Individual Player</h1>
+
+<div class="single_player_container">
+    <div class="player_card">
+        <div class="player_pic"><img src=<%=@player_id.picture%> />
+            <div class="team_logo"><img src=<%= @player_team[:logo] %> /></div>  
+            <div><%= @player_id.name %></div>
+            <div>Height: <%= @player_id.height %></div>
+            <div>Weight: <%= @player_id.weight %></div>
+            <div><%= @player_team[:name] %></div>
+        </div>
+        <div class="player_info">
+        </div>
+    </div>
+</div>

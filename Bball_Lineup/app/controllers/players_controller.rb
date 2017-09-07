@@ -8,6 +8,7 @@ class PlayersController <ApplicationController
     def show
         params[:id]
         @player_id = Player.find(params[:id])
+        @player_team = Team.find_by(abbrev: "#{@player_id.team}")
     end
 
 end

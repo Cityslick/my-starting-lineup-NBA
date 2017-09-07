@@ -1,5 +1,5 @@
 <%= stylesheet_link_tag 'index.css' %>
-<h1>ALL PLAYERS</h1>
+<h1>ALL STARTING LINEUPS</h1>
 
 <div class="index">
     <% @team.each do |t| %>
@@ -21,7 +21,7 @@
                                 <div><%= p.weight %></div>
                             </div>
                             <div class="links">
-                                <button class="btn-1">MORE</button>
+                                <%= button_to "MORE", player_show_path(p.id), method: :get %>
                                 <button class="btn-1">EDIT</button>
                                 <button class="btn-1">DELETE</button>
                             </div>
