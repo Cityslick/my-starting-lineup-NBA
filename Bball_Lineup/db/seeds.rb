@@ -20,7 +20,6 @@ Team.create!([
     {logo: 'http://content.sportslogos.net/logos/6/229/full/xeti0fjbyzmcffue57vz5o1gl.gif', abbrev: 'DEN', name: 'Denver Nuggets', total_salaries: '$95.08m'},
     {logo: 'http://content.sportslogos.net/logos/6/223/full/2164_detroit_pistons-primary-2018.png', abbrev: 'DET', name: 'Detroit Pistons', total_salaries: '$115.7m'},
     {logo: 'http://content.sportslogos.net/logos/6/235/full/qhhir6fj8zp30f33s7sfb4yw0.png', abbrev: 'GSW', name: 'Golden State Warriors', total_salaries: '$137.5m'},
-    {logo: 'http://content.sportslogos.net/logos/6/235/full/qhhir6fj8zp30f33s7sfb4yw0.png', abbrev: 'GSW', name: 'Golden State Warriors', total_salaries: '$137.5m'},
     {logo: 'http://content.sportslogos.net/logos/6/230/full/8xe4813lzybfhfl14axgzzqeq.gif', abbrev: 'HOU', name: 'Houston Rockets', total_salaries: '$119.4m'},
     {logo: 'http://content.sportslogos.net/logos/6/224/full/4812_indiana_pacers-primary-2018.png', abbrev: 'IND', name: 'Indiana Pacers', total_salaries: '$93.7m'},
     {logo: 'http://content.sportslogos.net/logos/6/236/full/5462_los_angeles_clippers-primary-2016.png', abbrev: 'LAC', name: 'Los Angeles Clippers', total_salaries: '$122.8m'},
