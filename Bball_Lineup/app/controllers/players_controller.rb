@@ -11,19 +11,17 @@ class PlayersController <ApplicationController
         @player_team = Team.find_by(abbrev: "#{@player_id.team}")
     end
 
-    def create 
-        @player = Player.new
-
-        if @player.save
-            redirect_to players_path
-        else 
-            redirect_to 
+    def new
+        @player = Player.new 
     end
 
-    def update
+    def create
     end
 
-    def destroy
-    end
+    # def update
+    # end
+
+    # def destroy
+    # end
 
 end

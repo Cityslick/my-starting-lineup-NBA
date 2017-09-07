@@ -9,6 +9,7 @@
                 <div><%= t.abbrev %></div>
                 <div><%= t.name %></div>
                 <div><%= t.total_salaries %></div>
+                <div><%= link_to 'Add Player', new_player_path %></div>
             </div>
             <% @player.each do |p| %>
                     <% if p.team === t.abbrev %>
