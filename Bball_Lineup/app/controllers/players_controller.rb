@@ -5,5 +5,9 @@ class PlayersController <ApplicationController
         @player = Player.all
     end
 
+    def show
+        params[:id]
+        @player_id = Player.find(params[:id])
+    end
 
 end
