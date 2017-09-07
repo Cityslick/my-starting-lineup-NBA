@@ -1,0 +1,27 @@
+<%= stylesheet_link_tag 'index.css' %>
+<h1>ALL PLAYERS</h1>
+
+<div class="index">
+    <% @team.each do |t| %>
+        <div class="rotation">
+            <div class="team">
+                <div><img src=<%=t.logo%> /></div>  
+                <div><%= t.abbrev %></div>
+                <div><%= t.name %></div>
+                <div><%= t.total_salaries %></div>
+            </div>
+            <% @player.each do |p| %>
+                <div class="player-container">
+                    <% if p.team === t.abbrev %>
+                        <img src=<%=p.picture%> />
+                        <%= p.name %>
+                        <%= p.position %>
+                        <%= p.height %>
+                        <%= p.weight %>
+                    <% end %>
+                </div>
+            <% end %>
+        </div>
+        <br>
+    <% end %>
+</div>

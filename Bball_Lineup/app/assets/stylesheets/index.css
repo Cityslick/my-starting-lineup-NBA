@@ -1,0 +1,32 @@
+body {
+    margin: 0 auto;
+}
+
+.index {
+    display: flex;
+    flex-direction: column;
+}
+
+.rotation {
+    display: flex;
+    width: 100%;
+    border: 2px solid red;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    min-width: 10%;
+    border: 2px solid blue;
+}
+
+.team img {
+    height: 60%;
+    width: 60%;
+    margin-left: 20%;
+}
+
+
