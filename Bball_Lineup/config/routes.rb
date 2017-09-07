@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   get '/players/:id' => 'players#show', as: 'player_show'
   get '/players' => 'players#index'
+  resources :players
 
 end
