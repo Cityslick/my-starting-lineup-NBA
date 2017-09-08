@@ -16,7 +16,13 @@ class PlayersController <ApplicationController
     end
 
     def create
+        play = Player.new(post_player)
         
+        if play.save
+            redirect_to player_show_path(play)
+        else
+            redirect_to new_player_path
+        end
     end
 
     # def update
@@ -24,5 +30,10 @@ class PlayersController <ApplicationController
 
     # def destroy
     # end
+
+    private
+    def post_player
+        params.require(:player).permit(:name, :team, :position, :height, :weight, :picture)
+    end
 
 end
