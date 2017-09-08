@@ -1,6 +1,36 @@
 <h2>Add Player</h2>
 
-<%= form_for(@player) do |f| %>
-    <div><%= f.label :name%></div>
-    <div><%= f.collection_select :name%></div>
+<%= form_for(@player_new) do |f| %>
+    <div>
+        <div><%= f.label :name%></div>
+        <%= f.text_field :name%>
+    </div>
+    <div>
+        <div><%= f.label :team%></div>
+        <%= f.select :team, options_for_select([
+        ['ATL'], ['BOS'], ['BKN'], ['CHA'], ['CHI'],
+        ['CLE'], ['DAL'], ['DEN'], ['DET'], ['GSW'],
+        ['HOU'], ['IND'], ['LAC'], ['LAL'], ['MIA'],
+        ['MIL'], ['MIN'], ['NOP'], ['NYK'] 
+        ]) %>
+    </div>
+    <div>
+        <div><%= f.label :position %></div>
+        <%= f.text_field :position %>
+    </div>
+    <div>
+        <div><%= f.label :height %></div>
+        <%= f.text_field :height %>
+    </div>
+    <div>
+        <div><%= f.label :weight %></div>
+        <%= f.text_field :weight %>
+    </div>
+    <div>
+        <div><%= f.label :picture_url %></div>
+        <%= f.text_field :picture %>
+    </div>
+    <div>
+        <%= f.submit "Add Player" %>
+    </div>
 <% end %>
