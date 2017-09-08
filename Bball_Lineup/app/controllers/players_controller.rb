@@ -12,10 +12,11 @@ class PlayersController <ApplicationController
     end
 
     def new
-        @player = Player.new 
+        @player_new = Player.new 
     end
 
     def create
+        
     end
 
     # def update

@@ -1,5 +1,6 @@
 <h2>Add Player</h2>
 
-<%= form_tag(player_create_path) %>
-    <%= submit_tag "Add Player" %>
+<%= form_for(@player) do |f| %>
+    <div><%= f.label :name%></div>
+    <div><%= f.collection_select :name%></div>
 <% end %>
