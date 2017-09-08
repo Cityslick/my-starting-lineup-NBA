@@ -8,19 +8,32 @@
     <div>
         <div><%= f.label :team%></div>
         <%= f.select :team, options_for_select([
-        ['ATL'], ['BOS'], ['BKN'], ['CHA'], ['CHI'],
-        ['CLE'], ['DAL'], ['DEN'], ['DET'], ['GSW'],
-        ['HOU'], ['IND'], ['LAC'], ['LAL'], ['MIA'],
-        ['MIL'], ['MIN'], ['NOP'], ['NYK'] 
+            ['Atlanta Hawks'], ['Boston Celtics'], ['Brooklyn Nets'], ['Charlotte Hornets'], ['Chicago Bulls'],
+            ['Cleveland Cavaliers'], ['Dallas Mavericks'], ['Denver Nuggets'], ['Detroit Pistons'], ['Golden State Warriors'],
+            ['Houston Rockets'], ['Indiana Pacers'], ['Los Angeles Clippers'], ['Los Angeles Lakers'], ['Miami Heat'],
+            ['Milwaukee Bucks'], ['Minnesota Timberwolves'], ['New Orleans Pelicans'], ['New York Knicks'], 
+            ['Oklahoma City Thunder'], ['Orlando Magic'], ['Philadelphia 76ers'], ['Phoenix Suns'],
+            ['Portland Trailblazers'], ['Sacramento Kings'], ['San Antonio Spurs'], ['Toronto Raptors'],
+            ['Utah Jazz'], ['Washington Wizards'] 
         ]) %>
     </div>
     <div>
         <div><%= f.label :position %></div>
-        <%= f.text_field :position %>
+        <%= f.select :position, options_for_select([
+            ['PG'], ['SG'], ['SF'], ['PF'], ['C']
+        ]) %>
     </div>
     <div>
         <div><%= f.label :height %></div>
-        <%= f.text_field :height %>
+        <%= f.select :height, options_for_select([
+            ['5ft 0in'], ['5ft 1in'], ['5ft 2in'], ['5ft 3in'], ['5ft 4in'], ['5ft 5in'],
+            ['5ft 6in'], ['5ft 7in'], ['5ft 8in'], ['5ft 9in'], ['5ft 10in'], ['5ft 11in'],
+            ['6ft 0in'], ['6ft 1in'], ['6ft 2in'], ['6ft 3in'], ['6ft 4in'], ['6ft 5in'],
+            ['6ft 6in'], ['6ft 7in'], ['6ft 8in'], ['6ft 9in'], ['6ft 10in'], ['6ft 11in'],
+            ['7ft 0in'], ['7ft 1in'], ['7ft 2in'], ['7ft 3in'], ['7ft 4in'], ['7ft 5in'],
+            ['7ft 6in'], ['7ft 7in'], ['7ft 8in'], ['7ft 9in'], ['7ft 10in'], ['7ft 11in'],
+            ['8ft 0in'], 
+        ]) %>
     </div>
     <div>
         <div><%= f.label :weight %></div>
