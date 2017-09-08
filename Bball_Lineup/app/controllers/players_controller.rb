@@ -28,8 +28,11 @@ class PlayersController <ApplicationController
     # def update
     # end
 
-    # def destroy
-    # end
+    def destroy
+        @player_del = Player.find(params[:id])
+        @player_del.destroy
+        redirect_to players_path
+    end
 
     private
     def post_player

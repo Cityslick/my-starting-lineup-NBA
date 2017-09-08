@@ -24,7 +24,8 @@
                             <div class="links">
                                 <%= button_to "MORE", player_show_path(p.id), method: :get %>
                                 <button class="btn-1">EDIT</button>
-                                <button class="btn-1">DELETE</button>
+                                <%= button_to "DELETE", player_show_path(p.id), method: :delete, 
+                                data: { confirm: 'Are you sure?!' } %>
                             </div>
                         </div>
                     <% end %>
