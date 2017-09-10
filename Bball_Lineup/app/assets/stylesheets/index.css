@@ -118,17 +118,19 @@ body {
 
 .player_card {
     width: 60%;
-    height: 80vh;
+    height: 60vh;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     background: #FAFAFA;
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 
     0 3px 14px 2px rgba(0, 0, 0, .12), 
     0 5px 5px -3px rgba(0, 0, 0, .2);
 }
 
-.player_pic img {
-    height: 50%;
-    width: 90%;
+.player_pic .player_headshot {
+    height: 75%;
+    width: 105%;
     background: rgba(0, 0, 0, .08);
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 
     0 3px 14px 2px rgba(0, 0, 0, .12), 
@@ -136,33 +138,80 @@ body {
 }
 
 .player_pic {
-    width: 100%;
+    width: 36%;
     background: white;
     color: #303030;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    height: 80%;
 }
 
 .player_info {
-    border: 2px solid orange;
-    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    color: #044F67;
+    width: 40%;
+    height: 90%;
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 
+    0 3px 14px 2px rgba(0, 0, 0, .12), 
+    0 5px 5px -3px rgba(0, 0, 0, .2);
 }
 
-.player_info .team_logo img {
-    height: 70%;
-    width: 68%;
-    
-}
 
 .team_logo {
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
+    height:10%;
+    
 }
 
 .team_logo > img {
     box-shadow: none;
+    height: 120%;
+    width: 120%;
+}
+
+.edit-form {
+    width: 80%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.edit-form div {   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    color: white;
+}
+
+.edit-form input {
+    width: 70%;
+    margin: 4px;
+    padding: 2px;
+    font-size: 12pt;
+    border: none;
+    border-bottom: 2px solid lightblue;
+    background: #044F67;
+    color: white;
+}
+
+.edit-form input[type="submit"],
+.player_info a {
+    background: #1F4788;
+    border: 2px solid lightblue;
+    color: white;
+    padding: 2px;
+    text-decoration: none;
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 
+    0 3px 14px 2px rgba(0, 0, 0, .12), 
+    0 5px 5px -3px rgba(0, 0, 0, .2);
 }
