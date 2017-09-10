@@ -6,7 +6,6 @@ class PlayersController <ApplicationController
     end
 
     def show
-        params[:id]
         @player_id = Player.find(params[:id])
         @player_team = Team.find_by(name: "#{@player_id.team}")
     end
@@ -25,8 +24,21 @@ class PlayersController <ApplicationController
         end
     end
 
-    # def update
-    # end
+    def edit
+        params[:id]
+        @player_id = Player.find(params[:id])
+        @player_team = Team.find_by(name: "#{@player_id.team}")
+    end
+
+    def update
+        @player_id = Player.find(params[:id])
+
+        if @player_id.update_attributes(post_player)
+            redirect_to player_show_path(@player_id)
+        else
+            redirect_to new_edit_player_path
+        end
+    end
 
     def destroy
         @player_del = Player.find(params[:id])

@@ -1,0 +1,40 @@
+<h1>Edit Player</h1>
+
+<div class="single_player_container">
+    <div class="player_card">
+        <div class="player_pic"><img src=<%=@player_id.picture%> />
+            <div class="team_logo"><img src=<%= @player_team[:logo] %> /></div>  
+        </div>
+        <div class="player_info">
+            <%= form_for(@player_id) do |f| %>
+                <div>
+                    <div><%= f.label :name%></div>
+                    <%= f.text_field :name%>
+                </div>
+                <div>
+                    <div><%= f.label :team%></div>
+                    <%= f.text_field :team %>
+                </div>
+                <div>
+                    <div><%= f.label :position %></div>
+                    <%= f.text_field :position %>
+                </div>
+                <div>
+                    <div><%= f.label :height %></div>
+                    <%= f.text_field :height %>
+                </div>
+                <div>
+                    <div><%= f.label :weight %></div>
+                    <%= f.text_field :weight %>
+                </div>
+                <div>
+                    <div><%= f.label :picture_url %></div>
+                    <%= f.text_field :picture %>
+                </div>
+                <div>
+                    <%= f.submit "Update Player" %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

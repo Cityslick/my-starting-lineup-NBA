@@ -23,7 +23,7 @@
                             </div>
                             <div class="links">
                                 <%= button_to "MORE", player_show_path(p.id), method: :get %>
-                                <button class="btn-1">EDIT</button>
+                                <%= button_to "EDIT", edit_player_path(p.id), method: :get %>
                                 <%= button_to "DELETE", player_show_path(p.id), method: :delete, 
                                 data: { confirm: 'Are you sure?!' } %>
                             </div>
