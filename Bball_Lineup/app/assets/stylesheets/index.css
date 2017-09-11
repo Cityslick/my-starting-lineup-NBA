@@ -274,12 +274,14 @@ body {
 }
 
 .home_txt {
-    width: 50%;
+    width: 65%;
     background: #303030;
     padding: 20px;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 
     0 15px 12px rgba(0,0,0,0.22);
     font-size: 13pt;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
 .home_link a {
@@ -289,4 +291,5 @@ body {
     padding: 10px;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 
     0 15px 12px rgba(0,0,0,0.22);
+    font-size: 14pt;
 }
