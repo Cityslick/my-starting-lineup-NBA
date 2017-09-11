@@ -1,5 +1,20 @@
 <%= stylesheet_link_tag 'index.css' %>
-<h1>ALL STARTING LINEUPS</h1>
+<div class="navigation">
+    <div class="nav_logo">
+        <h2>My5</h2>
+    </div>
+    <div class="nav_links">
+        <div class="links_container">
+            <ul>
+                <li><%= link_to 'All Starters', index_path %></li>
+                <li><%= link_to 'Add Player', new_player_path %></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="page_title">
+    <h1>2017 - 2018 STARTERS</h1>
+</div>
 
 <div class="index">
     <% @team.each do |t| %>
@@ -9,7 +24,6 @@
                 <div><%= t.abbrev %></div>
                 <div><%= t.name %></div>
                 <div><%= t.total_salaries %></div>
-                <div><%= link_to 'Add Player', new_player_path %></div>
             </div>
             <% @player.each do |p| %>
                     <% if p.team === t.name %>

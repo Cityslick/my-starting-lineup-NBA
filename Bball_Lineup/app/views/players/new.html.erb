@@ -1,49 +1,78 @@
-<h2>Add Player</h2>
+<%= stylesheet_link_tag 'index.css' %>
+<div class="navigation">
+    <div class="nav_logo">
+        <h2>My5</h2>
+    </div>
+    <div class="nav_links">
+        <div class="links_container">
+            <ul>
+                <li><%= link_to 'All Starters', index_path %></li>
+                <li><%= link_to 'Add Player', new_player_path %></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="page_title">
+    <h1>ADD PLAYER</h1>
+</div>
 
-<%= form_for(@player_new) do |f| %>
-    <div>
-        <div><%= f.label :name%></div>
-        <%= f.text_field :name%>
+<div class="form-container">
+    <div class="add-form">
+        <%= form_for(@player_new) do |f| %>
+            <div>
+                <div><%= f.label :name%> <%= f.text_field :name%></div>
+            </div>
+            <div>
+                <div>
+                    <%= f.label :team%>
+                    <%= f.select :team, options_for_select([
+                        ['Atlanta Hawks'], ['Boston Celtics'], ['Brooklyn Nets'], ['Charlotte Hornets'], ['Chicago Bulls'],
+                        ['Cleveland Cavaliers'], ['Dallas Mavericks'], ['Denver Nuggets'], ['Detroit Pistons'], ['Golden State Warriors'],
+                        ['Houston Rockets'], ['Indiana Pacers'], ['Los Angeles Clippers'], ['Los Angeles Lakers'], ['Miami Heat'],
+                        ['Milwaukee Bucks'], ['Minnesota Timberwolves'], ['New Orleans Pelicans'], ['New York Knicks'], 
+                        ['Oklahoma City Thunder'], ['Orlando Magic'], ['Philadelphia 76ers'], ['Phoenix Suns'],
+                        ['Portland Trailblazers'], ['Sacramento Kings'], ['San Antonio Spurs'], ['Toronto Raptors'],
+                        ['Utah Jazz'], ['Washington Wizards'] 
+                    ]) %>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <%= f.label :position %>
+                    <%= f.select :position, options_for_select([
+                        ['Point Guard'], ['Shooting Guard'], ['Small Forward'], ['Power Forward'], ['Center']
+                    ]) %>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <%= f.label :height %>
+                    <%= f.select :height, options_for_select([
+                        ['5ft 0in'], ['5ft 1in'], ['5ft 2in'], ['5ft 3in'], ['5ft 4in'], ['5ft 5in'],
+                        ['5ft 6in'], ['5ft 7in'], ['5ft 8in'], ['5ft 9in'], ['5ft 10in'], ['5ft 11in'],
+                        ['6ft 0in'], ['6ft 1in'], ['6ft 2in'], ['6ft 3in'], ['6ft 4in'], ['6ft 5in'],
+                        ['6ft 6in'], ['6ft 7in'], ['6ft 8in'], ['6ft 9in'], ['6ft 10in'], ['6ft 11in'],
+                        ['7ft 0in'], ['7ft 1in'], ['7ft 2in'], ['7ft 3in'], ['7ft 4in'], ['7ft 5in'],
+                        ['7ft 6in'], ['7ft 7in'], ['7ft 8in'], ['7ft 9in'], ['7ft 10in'], ['7ft 11in'],
+                        ['8ft 0in'], 
+                    ]) %>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <%= f.label :weight %>
+                    <%= f.text_field :weight %>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <%= f.label :picture_url %>
+                    <%= f.text_field :picture %>
+                </div>
+            </div>
+            <div>
+                <%= f.submit "Add Player" %>
+            </div>
+        <% end %>
     </div>
-    <div>
-        <div><%= f.label :team%></div>
-        <%= f.select :team, options_for_select([
-            ['Atlanta Hawks'], ['Boston Celtics'], ['Brooklyn Nets'], ['Charlotte Hornets'], ['Chicago Bulls'],
-            ['Cleveland Cavaliers'], ['Dallas Mavericks'], ['Denver Nuggets'], ['Detroit Pistons'], ['Golden State Warriors'],
-            ['Houston Rockets'], ['Indiana Pacers'], ['Los Angeles Clippers'], ['Los Angeles Lakers'], ['Miami Heat'],
-            ['Milwaukee Bucks'], ['Minnesota Timberwolves'], ['New Orleans Pelicans'], ['New York Knicks'], 
-            ['Oklahoma City Thunder'], ['Orlando Magic'], ['Philadelphia 76ers'], ['Phoenix Suns'],
-            ['Portland Trailblazers'], ['Sacramento Kings'], ['San Antonio Spurs'], ['Toronto Raptors'],
-            ['Utah Jazz'], ['Washington Wizards'] 
-        ]) %>
-    </div>
-    <div>
-        <div><%= f.label :position %></div>
-        <%= f.select :position, options_for_select([
-            ['Point Guard'], ['Shooting Guard'], ['Small Forward'], ['Power Forward'], ['Center']
-        ]) %>
-    </div>
-    <div>
-        <div><%= f.label :height %></div>
-        <%= f.select :height, options_for_select([
-            ['5ft 0in'], ['5ft 1in'], ['5ft 2in'], ['5ft 3in'], ['5ft 4in'], ['5ft 5in'],
-            ['5ft 6in'], ['5ft 7in'], ['5ft 8in'], ['5ft 9in'], ['5ft 10in'], ['5ft 11in'],
-            ['6ft 0in'], ['6ft 1in'], ['6ft 2in'], ['6ft 3in'], ['6ft 4in'], ['6ft 5in'],
-            ['6ft 6in'], ['6ft 7in'], ['6ft 8in'], ['6ft 9in'], ['6ft 10in'], ['6ft 11in'],
-            ['7ft 0in'], ['7ft 1in'], ['7ft 2in'], ['7ft 3in'], ['7ft 4in'], ['7ft 5in'],
-            ['7ft 6in'], ['7ft 7in'], ['7ft 8in'], ['7ft 9in'], ['7ft 10in'], ['7ft 11in'],
-            ['8ft 0in'], 
-        ]) %>
-    </div>
-    <div>
-        <div><%= f.label :weight %></div>
-        <%= f.text_field :weight %>
-    </div>
-    <div>
-        <div><%= f.label :picture_url %></div>
-        <%= f.text_field :picture %>
-    </div>
-    <div>
-        <%= f.submit "Add Player" %>
-    </div>
-<% end %>
+</div>
