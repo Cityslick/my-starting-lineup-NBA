@@ -1,4 +1,20 @@
-<h1>Individual Player</h1>
+<%= stylesheet_link_tag 'index.css' %>
+<div class="navigation">
+    <div class="nav_logo">
+        <h2><%= link_to 'My5', index_path %></h2>
+    </div>
+    <div class="nav_links">
+        <div class="links_container">
+            <ul>
+                <li><%= link_to 'All Starters', index_path %></li>
+                <li><%= link_to 'Add Player', new_player_path %></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="page_title">
+    <h1>INDIVIDUAL PLAYER</h1>
+</div>
 
 <div class="single_player_container">
     <div class="player_card">
@@ -11,8 +27,7 @@
             <div><%= @player_id.height %></div>
             <div><%= @player_id.weight %></div>
             <div><%= @player_team[:name] %></div>
-            <%= link_to 'Edit Player', edit_player_path %>
-            <a href="javascript:history.back()">All Players</a>
+            <%= link_to 'EDIT', edit_player_path %>
         </div>
     </div>
 </div>
