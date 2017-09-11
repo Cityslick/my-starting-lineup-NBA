@@ -1,4 +1,8 @@
-class PlayersController <ApplicationController 
+class PlayersController <ApplicationController
+    
+    def home
+        
+    end
     
     def index
         @team = Team.all

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|PT+Sans|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|PT+Sans|Raleway|Merriweather|IM+Fell+French+Canon+SC');
 
 
 body {
@@ -214,4 +214,79 @@ body {
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 
     0 3px 14px 2px rgba(0, 0, 0, .12), 
     0 5px 5px -3px rgba(0, 0, 0, .2);
+}
+
+/* Home Page */
+
+.home_page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.section_one {
+    background: orange;
+    height: 100%;
+    width: 50%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_two {
+    background: blue;
+    background-image: url('https://sportspressboxblog.files.wordpress.com/2016/10/eob201980.jpg?w=980&h=551&crop=1');
+    background-size: cover;
+    height: 100%;
+    width: 50%;
+    flex: 3;
+}
+
+.home_txt_container {
+    height: 73%;
+    width: 80%;
+    background: #212121;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0 10px 0;
+    color: white;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+    0 10px 10px rgba(0,0,0,0.22);
+}
+
+.league_photo {
+    background-image: url('https://vignette.wikia.nocookie.net/logopedia/images/4/4c/NBA_Horizontal_Logo_.svg/revision/latest/scale-to-width-down/640?cb=20160207144301');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 10%;
+    width: 50%;
+}
+
+.home_title {
+    background: #303030;
+    padding: 0 8px 0 8px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 
+    0 15px 12px rgba(0,0,0,0.22);
+}
+
+.home_txt {
+    width: 50%;
+    background: #303030;
+    padding: 20px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 
+    0 15px 12px rgba(0,0,0,0.22);
+    font-size: 13pt;
+}
+
+.home_link a {
+    text-decoration: none;
+    color: black;
+    background: orange;
+    padding: 10px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 
+    0 15px 12px rgba(0,0,0,0.22);
 }
